@@ -22,13 +22,13 @@ import smplx
 import argparse
 
 from tqdm import tqdm
-from tools.objectmodel import ObjectModel
-from tools.cfg_parser import Config
-from tools.utils import makepath, makelogger
-from tools.meshviewer import Mesh
-from tools.utils import parse_npz
-from tools.utils import params2torch
-from tools.utils import to_cpu
+from .tools.objectmodel import ObjectModel
+from .tools.cfg_parser import Config
+from .tools.utils import makepath, makelogger
+from .tools.meshviewer import Mesh
+from .tools.utils import parse_npz
+from .tools.utils import params2torch
+from .tools.utils import to_cpu
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 

@@ -22,13 +22,13 @@ import smplx
 import argparse
 from tqdm import tqdm
 
-from tools.objectmodel import ObjectModel
-from tools.meshviewer import Mesh, MeshViewer, points2sphere, colors
-from tools.utils import parse_npz
-from tools.utils import params2torch
-from tools.utils import to_cpu
-from tools.utils import euler
-from tools.cfg_parser import Config
+from grab.tools.objectmodel import ObjectModel
+from grab.tools.meshviewer import Mesh, MeshViewer, points2sphere, colors
+from grab.tools.utils import parse_npz
+from grab.tools.utils import params2torch
+from grab.tools.utils import to_cpu
+from grab.tools.utils import euler
+from grab.tools.cfg_parser import Config
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
