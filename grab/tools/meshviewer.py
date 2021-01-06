@@ -38,6 +38,7 @@ class Mesh(trimesh.Trimesh):
                  visual = None,
                  wireframe=False,
                  smooth = False,
+                 point_radius=0.001,
                  **kwargs):
 
         self.wireframe = wireframe
@@ -52,7 +53,7 @@ class Mesh(trimesh.Trimesh):
             vertices = vertices*vscale
 
         if faces is None:
-            mesh = points2sphere(vertices)
+            mesh = points2sphere(vertices, radius=point_radius)
             vertices = mesh.vertices
             faces = mesh.faces
             visual = mesh.visual
